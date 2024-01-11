@@ -1,0 +1,203 @@
+body, html {
+    font-family: 'consolas', monospace;
+    height: 100%;
+    margin: 0;
+    padding-top: 60px;
+    color: #4b4a4a;
+    background-color: #D0BFFF;
+    position: relative;
+}
+
+.content-wrapper {
+    min-height: 100vh; /* use viewport height */
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    box-sizing: border-box; 
+    padding-bottom: 50px;   
+}
+
+main {
+    flex: 1; /* allows main content to grow and consume available space */
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #D0BFFF;
+    transition: background-color 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+}
+
+.title a {
+    font-size: 1.5em;
+    margin-left: -5px;
+    color: #6e5ba0;
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+
+.title a:hover {
+    color: #B5D5C5;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin: 0 5px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10%;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.nav-item a:hover {
+    background-color: #B5D5C5;
+}
+
+div {
+    display: block;
+}
+
+.box {
+    max-width: 400px;
+    margin: 50px auto;
+    background: #B5D5C5;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 1,5rem;
+    font-weight: normal;
+}
+
+#heading {
+    color: #4b4a4a;
+    text-align: center;
+    padding: 0.1px;
+    font-size: 0.7rem;
+}
+
+.item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D0BFFF;
+    padding-left: 5px;
+}
+
+.item p {
+    padding-left: 10px;
+    vertical-align: middle;
+    line-height: 1.2;;
+}
+
+.item:last-child {
+    border-bottom: 0;
+}
+
+.delete {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: auto;
+    transition: transform 0.1s; 
+}
+
+.delete-work {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: auto;
+    transition: transform 0.1s;
+}
+
+button:active, .delete:active {
+    transform: scale(0.95); 
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + p {
+    text-decoration: line-through;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #FBF0B2;  /* Change to the color you desire */
+}
+
+form {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.completed {
+    text-decoration: line-through;
+  }
+
+input[type="text"] {
+    text-align: center;
+    height: 55px;
+    top: 5px;
+    margin: 8px;
+    margin-right: 0px;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    color: #4b4a4a;
+    font-weight: 200;
+    width: 313px;
+}
+
+input[type="text"]:focus, 
+button:focus {
+    outline-color: #B5D5C5;
+}
+
+button {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #FBF0B2;
+    color: #fff;
+    font-size: 30px;
+    border-width: 0;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+footer {
+    color: #4b4a4a;
+    text-align: center;
+    padding: 10px 0;
+}
+

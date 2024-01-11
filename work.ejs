@@ -1,0 +1,39 @@
+<body>
+
+  <div class="content-wrapper">
+
+    <main>
+
+      <%- include("partials/header.ejs") %>
+
+      <div class="box" id="heading">
+          <h1>
+            Work
+          </h1>
+      </div>
+
+      <div class="box">
+          <% workTasks.forEach((task, index) => { %>
+              <div class="item" data-index="<%= index %>">
+                  <!-- Check the checkbox if the task is completed -->
+                  <input type="checkbox" class="toggle-completion-work" <%= task.completed ? 'checked' : '' %> data-description="<%= task.description %>">
+                  <!-- Apply 'completed' class if the task is completed -->
+                  <p class="<%= task.completed ? 'completed' : '' %>"><%= task.description %></p>
+                  <button class="delete-work" data-description="<%= task.description %>">✖️</button>
+              </div>
+          <% }); %>
+          
+          <input type="text" id="newWorkItem" placeholder="New Item" autocomplete="off">
+          <button id="addWorkItemButton">+</button>
+      </div>
+
+    </main>
+
+  </div>
+
+  <%- include("partials/footer.ejs") %>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/script.js"></script>
+
+</body>
